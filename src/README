@@ -1,0 +1,1 @@
+use the authentication controller /register to create users, instead of the user controller to create a user.

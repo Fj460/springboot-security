@@ -3,6 +3,7 @@ package com.practice.Dockerize.controllers;
 import com.practice.Dockerize.entities.User;
 
 import com.practice.Dockerize.services.UserService;
+import com.practice.Dockerize.DTOS.UserRequest;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -21,10 +22,6 @@ public class UserController {
     public String createUser(@RequestBody User user){
         return service.createUser(user);
     }
-   /* @PostMapping("/increase")
-    public Integer increaseCount(@RequestBody String name){
-        return service.addCount(name);
-    }*/
 
     @PostMapping("/discover")
     public String userexists(@RequestBody UUID id){
@@ -32,15 +29,18 @@ public class UserController {
         return service.users(id);
 
     }
-    @PostMapping("/test")
-    public String message(@RequestBody String message){
-        return message;
-    }
     @GetMapping
     public List<User> users(){
         return service.getAllUSers();
     }
-    @PostMapping("/increase")
+/*
+    @PostMapping("/testPost")
+    public User createUser(String name, String password,String email){
+        User user = new User(UUID.randomUUID(),name, password,email);
+        return service.createUsers(user);
+    }*/
+
+    /*@PostMapping("/increase")
     public ResponseEntity<Integer> increaseCount(@RequestBody UserRequest request) {
         try {
             Integer count = service.addCount(request.getName());
@@ -49,7 +49,11 @@ public class UserController {
             // Handle exceptions gracefully
             return ResponseEntity.badRequest().body(-1);
         }
-    }
+    }*/
+    /* @PostMapping("/increase")
+    public Integer increaseCount(@RequestBody String name){
+        return service.addCount(name);
+    }*/
 
 
 }

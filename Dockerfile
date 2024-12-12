@@ -3,7 +3,7 @@ COPY ./target/Dockerize-0.0.1-SNAPSHOT.jar /tmp
 COPY src /home/app/src
 COPY pom.xml /home/app
 COPY src/main/resources/application.properties /home/app/properties
-ENV SPRING_DATASOURCE_URL=jdbc:mysql://localhost:3303/dock
-ENV SPRING_DATASOURCE_USERNAME=root
-ENV SPRING_DATASOURCE_PASSWORD=my-secret-password
+ENV DATABASE_URL=jdbc:mysql://172.18.0.2:3306/dock
+ENV DATABASE_USERNAME=root
+ENV DATABASE_PASSWORD=dbpass
 ENTRYPOINT ["java", "-jar", "/tmp/Dockerize-0.0.1-SNAPSHOT.jar"]

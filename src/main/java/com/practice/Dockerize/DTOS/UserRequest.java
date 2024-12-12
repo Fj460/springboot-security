@@ -1,4 +1,4 @@
-package com.practice.Dockerize.controllers;
+package com.practice.Dockerize.DTOS;
 
 import lombok.Data;
 

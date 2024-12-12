@@ -19,15 +19,8 @@ public class UserService {
         repository.save(user);
         return "user created1!";
     }
-    @Transactional
-    public Integer addCount(String name){
-        User user= repository.findByName(name);
-        if(user==null){
-            System.out.println("User not found "+ name);
-            return 0;
-        }
-        user.setCount(user.getCount()+1);
-        return user.getCount();
+    public User createUsers(User user){
+        return repository.save(user);
     }
     public String users(UUID id){
         User user= repository.findById(id).orElseThrow();
@@ -36,14 +29,22 @@ public class UserService {
             }
             return "User not found";
     }
-    public Integer add(UUID id){
-        User user = repository.findById(id).orElseThrow();
-        user.setCount(user.getCount()+1);
-        return user.getCount();
-    }
+
     public List<User> getAllUSers(){
         return repository.findAll();
     }
+
+
+/*
+   public Integer addCount(String name){
+        User user= repository.findByName(name);
+        if(user==null){
+            System.out.println("User not found "+ name);
+            return 0;
+        }
+        user.setCount(user.getCount()+1);
+        return user.getCount();
+    }*/
 
 
 }
