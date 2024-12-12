@@ -1,0 +1,6 @@
+D:\WorkArea\Dev\Spring Boot\Dockerize\src\main\java\com\practice\Dockerize\controllers\UserController.java
+D:\WorkArea\Dev\Spring Boot\Dockerize\src\main\java\com\practice\Dockerize\DockerizeApplication.java
+D:\WorkArea\Dev\Spring Boot\Dockerize\src\main\java\com\practice\Dockerize\DTOS\UserRequest.java
+D:\WorkArea\Dev\Spring Boot\Dockerize\src\main\java\com\practice\Dockerize\entities\User.java
+D:\WorkArea\Dev\Spring Boot\Dockerize\src\main\java\com\practice\Dockerize\repositories\UsersRepository.java
+D:\WorkArea\Dev\Spring Boot\Dockerize\src\main\java\com\practice\Dockerize\services\UserService.java

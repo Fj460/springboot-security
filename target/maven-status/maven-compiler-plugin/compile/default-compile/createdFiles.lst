@@ -1,0 +1,7 @@
+com\practice\Dockerize\DTOS\UserRequest.class
+com\practice\Dockerize\repositories\UsersRepository.class
+com\practice\Dockerize\entities\User$UserBuilder.class
+com\practice\Dockerize\DockerizeApplication.class
+com\practice\Dockerize\controllers\UserController.class
+com\practice\Dockerize\services\UserService.class
+com\practice\Dockerize\entities\User.class
