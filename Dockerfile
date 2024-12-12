@@ -1,5 +1,6 @@
 FROM openjdk:17
 COPY ./target/Dockerize-0.0.1-SNAPSHOT.jar /tmp
+RUN CHMOD 777 /tmp/Dockerize-0.0.1-SNAPSHOT.jar
 COPY src /home/app/src
 COPY pom.xml /home/app
 COPY src/main/resources/application.properties /home/app/properties
